@@ -1,7 +1,7 @@
-var btc = require("./coins/btc.js");
+var zija = require("./coins/zija.js");
 var ltc = require("./coins/ltc.js");
 
 module.exports = {
-	"BTC": btc,
+	"ZIJA": zija,
 	"LTC": ltc
 };

@@ -2,30 +2,30 @@ var Decimal = require("decimal.js");
 Decimal8 = Decimal.clone({ precision:8, rounding:8 });
 
 module.exports = {
-	name:"Bitcoin",
-	logoUrl:"/img/logo/btc.svg",
-	siteTitle:"Bitcoin Explorer",
-	siteDescriptionHtml:"<b>BTC Explorer</b> is <a href='https://github.com/janoside/btc-rpc-explorer). If you run your own [Bitcoin Full Node](https://bitcoin.org/en/full-node), **BTC Explorer** can easily run alongside it, communicating via RPC calls. See the project [ReadMe](https://github.com/janoside/btc-rpc-explorer) for a list of features and instructions for running.",
-	nodeTitle:"Bitcoin Full Node",
-	nodeUrl:"https://bitcoin.org/en/full-node",
-	demoSiteUrl: "https://btc.chaintools.io",
+	name:"Zijacoin",
+	logoUrl:"/img/logo/zija.svg",
+	siteTitle:"Zijacoin Explorer",
+	siteDescriptionHtml:"<b>ZIJA Explorer</b> is <a href='https://github.com/janoside/zija-rpc-explorer). If you run your own [Zijacoin Full Node](https://zijacoin.org/en/full-node), **ZIJA Explorer** can easily run alongside it, communicating via RPC calls. See the project [ReadMe](https://github.com/janoside/zija-rpc-explorer) for a list of features and instructions for running.",
+	nodeTitle:"Zijacoin Full Node",
+	nodeUrl:"https://zijacoin.org/en/full-node",
+	demoSiteUrl: "https://zija.chaintools.io",
 	miningPoolsConfigUrls:[
 		"https://raw.githubusercontent.com/blockchain/Blockchain-Known-Pools/master/pools.json",
-		"https://raw.githubusercontent.com/btccom/Blockchain-Known-Pools/master/pools.json"
+		"https://raw.githubusercontent.com/zijacom/Blockchain-Known-Pools/master/pools.json"
 	],
 	maxBlockWeight: 4000000,
 	currencyUnits:[
 		{
-			name:"BTC",
+			name:"ZIJA",
 			multiplier:1,
 			default:true,
-			values:["", "btc", "BTC"],
+			values:["", "zija", "ZIJA"],
 			decimalPlaces:8
 		},
 		{
-			name:"mBTC",
+			name:"mZIJA",
 			multiplier:1000,
-			values:["mbtc"],
+			values:["mzija"],
 			decimalPlaces:5
 		},
 		{
@@ -83,23 +83,23 @@ module.exports = {
 			date: "2009-01-03",
 			blockHeight: 0,
 			blockHash: "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
-			summary: "The Bitcoin Genesis Block.",
-			alertBodyHtml: "This is the first block in the Bitcoin blockchain, known as the 'Genesis Block'. This block was mined by Bitcoin's creator Satoshi Nakamoto. You can read more about <a href='https://en.bitcoin.it/wiki/Genesis_block'>the genesis block</a>.",
-			referenceUrl: "https://en.bitcoin.it/wiki/Genesis_block"
+			summary: "The Zijacoin Genesis Block.",
+			alertBodyHtml: "This is the first block in the Zijacoin blockchain, known as the 'Genesis Block'. This block was mined by Zijacoin's creator Satoshi Nakamoto. You can read more about <a href='https://en.zijacoin.it/wiki/Genesis_block'>the genesis block</a>.",
+			referenceUrl: "https://en.zijacoin.it/wiki/Genesis_block"
 		},
 		{
 			type: "tx",
 			date: "2009-01-03",
 			txid: "4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b",
 			summary: "The coinbase transaction of the Genesis Block.",
-			alertBodyHtml: "This transaction doesn't really exist! This is the coinbase transaction of the <a href='/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f'>Bitcoin Genesis Block</a>. For more background about this special-case transaction, you can read <a href='https://github.com/bitcoin/bitcoin/issues/3303'>this brief discussion</a> among some of the <a href='https://bitcoin.org'>Bitcoin</a> developers.",
-			referenceUrl: "https://github.com/bitcoin/bitcoin/issues/3303"
+			alertBodyHtml: "This transaction doesn't really exist! This is the coinbase transaction of the <a href='/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f'>Zijacoin Genesis Block</a>. For more background about this special-case transaction, you can read <a href='https://github.com/zijacoin/zijacoin/issues/3303'>this brief discussion</a> among some of the <a href='https://zijacoin.org'>Zijacoin</a> developers.",
+			referenceUrl: "https://github.com/zijacoin/zijacoin/issues/3303"
 		},
 		{
 			type: "tx",
 			date: "2009-10-12",
 			txid: "7dff938918f07619abd38e4510890396b1cef4fbeca154fb7aafba8843295ea2",
-			summary: "First bitcoin traded for fiat currency.",
+			summary: "First zijacoin traded for fiat currency.",
 			referenceUrl: "https://twitter.com/marttimalmi/status/423455561703624704"
 		},
 		{
@@ -128,16 +128,16 @@ module.exports = {
 			type: "tx",
 			date: "2010-05-22",
 			txid: "a1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d",
-			summary: "The 'Bitcoin Pizza' transaction.",
-			alertBodyHtml: "This is the famous 'Bitcoin Pizza' transaction.",
-			referenceUrl: "https://bitcointalk.org/index.php?topic=137.0"
+			summary: "The 'Zijacoin Pizza' transaction.",
+			alertBodyHtml: "This is the famous 'Zijacoin Pizza' transaction.",
+			referenceUrl: "https://zijacointalk.org/index.php?topic=137.0"
 		},
 		{
 			type: "tx",
 			date: "2011-05-18",
 			txid: "5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d",
-			summary: "Destroyed bitcoin.",
-			referenceUrl: "https://www.reddit.com/r/Bitcoin/comments/7mhoks/til_in_2011_a_user_running_a_modified_mining/"
+			summary: "Destroyed zijacoin.",
+			referenceUrl: "https://www.reddit.com/r/Zijacoin/comments/7mhoks/til_in_2011_a_user_running_a_modified_mining/"
 		},
 		{
 			type: "blockheight",
@@ -145,8 +145,8 @@ module.exports = {
 			blockHeight: 170,
 			blockHash: "00000000d1145790a8694403d4063f323d499e655c83426834d4ce2f8dd4a2ee",
 			summary: "First block containing a (non-coinbase) transaction.",
-			alertBodyHtml: "This block comes 9 days after the genesis block and is the first to contain a transfer of bitcoin. Before this block all blocks contained only coinbase transactions which mint new bitcoin.",
-			referenceUrl: "https://bitcointalk.org/index.php?topic=91806.msg1012234#msg1012234"
+			alertBodyHtml: "This block comes 9 days after the genesis block and is the first to contain a transfer of zijacoin. Before this block all blocks contained only coinbase transactions which mint new zijacoin.",
+			referenceUrl: "https://zijacointalk.org/index.php?topic=91806.msg1012234#msg1012234"
 		},
 		{
 			type: "blockheight",
@@ -169,12 +169,12 @@ module.exports = {
 			date: "2017-12-30",
 			txid: "9bf8853b3a823bbfa1e54017ae11a9e1f4d08a854dcce9f24e08114f2c921182",
 			summary: "Block reward lost",
-			alertBodyHtml: "This coinbase transaction completely fails to collect the block's mining reward. 12.5 BTC were lost.",
-			referenceUrl: "https://bitcoin.stackexchange.com/a/67012/3397"
+			alertBodyHtml: "This coinbase transaction completely fails to collect the block's mining reward. 12.5 ZIJA were lost.",
+			referenceUrl: "https://zijacoin.stackexchange.com/a/67012/3397"
 		}
 	],
 	exchangeRateData:{
-		jsonUrl:"https://api.coinmarketcap.com/v1/ticker/Bitcoin/",
+		jsonUrl:"https://api.coinmarketcap.com/v1/ticker/Zijacoin/",
 		exchangedCurrencyName:"usd",
 		responseBodySelectorFunction:function(responseBody) {
 			if (responseBody[0] && responseBody[0].price_usd) {

@@ -14,7 +14,7 @@ var simpleGit = require('simple-git');
 var utils = require("./app/utils.js");
 var moment = require("moment");
 var Decimal = require('decimal.js');
-var bitcoinCore = require("bitcoin-core");
+var zijacoinCore = require("zijacoin-core");
 var pug = require("pug");
 var momentDurationFormat = require("moment-duration-format");
 var coreApi = require("./app/api/coreApi.js");
@@ -83,7 +83,7 @@ app.runOnStartup = function() {
 	if (rpcCredentials) {
 		console.log("Connecting via RPC to node at " + config.credentials.rpc.host + ":" + config.credentials.rpc.port);
 
-		global.client = new bitcoinCore({
+		global.client = new zijacoinCore({
 			host: rpcCredentials.host,
 			port: rpcCredentials.port,
 			username: rpcCredentials.username,

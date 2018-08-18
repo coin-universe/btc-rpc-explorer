@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 var util = require('util');
 var moment = require('moment');
-var bitcoinCore = require("bitcoin-core");
+var zijacoinCore = require("zijacoin-core");
 var qrcode = require('qrcode');
-var bitcoinjs = require('bitcoinjs-lib');
+var zijacoinjs = require('zijacoinjs-lib');
 
 var utils = require('./../app/utils.js');
 var coins = require("./../app/coins.js");
@@ -178,7 +178,7 @@ router.post("/connect", function(req, res) {
 	req.session.port = port;
 	req.session.username = username;
 
-	var client = new bitcoinCore({
+	var client = new zijacoinCore({
 		host: host,
 		port: port,
 		username: username,
@@ -487,13 +487,13 @@ router.get("/address/:address", function(req, res) {
 	res.locals.result = {};
 
 	try {
-		res.locals.addressObj = bitcoinjs.address.fromBase58Check(address);
+		res.locals.addressObj = zijacoinjs.address.fromBase58Check(address);
 
 	} catch (err) {
 		console.log("Error u3gr02gwef: " + err);
 
 		try {
-			res.locals.addressObj = bitcoinjs.address.fromBech32(address);
+			res.locals.addressObj = zijacoinjs.address.fromBech32(address);
 
 		} catch (err2) {
 			console.log("Error u02qg02yqge: " + err2);

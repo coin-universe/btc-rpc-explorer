@@ -1,4 +1,4 @@
-### Setup of https://btc-explorer.com on Ubuntu 16.04
+### Setup of https://zija-explorer.com on Ubuntu 16.04
 
     apt update
     apt upgrade
@@ -11,13 +11,13 @@
     apt upgrade
     apt install python-certbot-nginx
     
-Copy content from [./btc-explorer.com.conf](./btc-explorer.com.conf) into `/etc/nginx/sites-available/btc-explorer.com.conf`
+Copy content from [./zija-explorer.com.conf](./zija-explorer.com.conf) into `/etc/nginx/sites-available/zija-explorer.com.conf`
 
-    certbot --nginx -d btc-explorer.com
+    certbot --nginx -d zija-explorer.com
     cd /etc/ssl/certs
     openssl dhparam -out dhparam.pem 4096
-    cd /home/bitcoin
-    git clone https://github.com/janoside/btc-rpc-explorer.git
-    cd /home/bitcoin/btc-rpc-explorer
+    cd /home/zijacoin
+    git clone https://github.com/janoside/zija-rpc-explorer.git
+    cd /home/zijacoin/zija-rpc-explorer
     npm install
-    pm2 start bin/www --name "btc-rpc-explorer"
+    pm2 start bin/www --name "zija-rpc-explorer"
