@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var util = require('util');
 var moment = require('moment');
-var zijacoinCore = require("zijacoin-core");
+var zijacoinCore = require("bitcoin-core");
 var qrcode = require('qrcode');
 var zijacoinjs = require('zijacoinjs-lib');
 
