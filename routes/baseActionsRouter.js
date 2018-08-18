@@ -4,7 +4,7 @@ var util = require('util');
 var moment = require('moment');
 var zijacoinCore = require("bitcoin-core");
 var qrcode = require('qrcode');
-var zijacoinjs = require('zijacoinjs-lib');
+var bitcoinjs = require('bitcoinjs-lib');
 
 var utils = require('./../app/utils.js');
 var coins = require("./../app/coins.js");
@@ -487,13 +487,13 @@ router.get("/address/:address", function(req, res) {
 	res.locals.result = {};
 
 	try {
-		res.locals.addressObj = zijacoinjs.address.fromBase58Check(address);
+		res.locals.addressObj = bitcoinjs.address.fromBase58Check(address);
 
 	} catch (err) {
 		console.log("Error u3gr02gwef: " + err);
 
 		try {
-			res.locals.addressObj = zijacoinjs.address.fromBech32(address);
+			res.locals.addressObj = bitcoinjs.address.fromBech32(address);
 
 		} catch (err2) {
 			console.log("Error u02qg02yqge: " + err2);
